@@ -1,3 +1,704 @@
 .index-title {
   font-size: 100px;
 }
+/* 引入字體（外部資源通常放在最上面） */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+/* 引入字體（外部資源通常放在最上面） */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 通用樣式：顏色（使用變數，好處是網站主色更換時，可從變數直接改，然後就全都改；不用每個都套用） */
+
+:root{
+    /* 主色 */
+    --primary-100: #F5FEE7;
+    --primary-200: #E8FEC5;
+    --primary-300: #C0FA73;
+    --primary-400: #57A203;
+    --primary-500: #477A11;
+    /* 中性色 */
+    --neutral-0: #ffffff;
+    --neutral-100: #F8F9FA;
+    --neutral-200: #E9ECEF;
+    --neutral-300: #DEE2E6;
+    --neutral-400: #CED4DA;
+    --neutral-500: #ADB5BD;
+    --neutral-600: #6C757D;
+    --neutral-700: #495057;
+    --neutral-800: #343A40;
+    --neutral-900: #212529;
+    --danger-300: #d74f4f;
+}
+
+/* 通用樣式：顏色（使用變數，好處是網站主色更換時，可從變數直接改，然後就全都改；不用每個都套用） */
+
+
+/* 通用樣式：標籤基本樣式 */
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+img{
+    vertical-align: middle;
+    /* 清除圖片下方 2-3 公分的空白 */
+    max-width: 100%;
+    height: auto;
+    
+}
+
+a{
+    color:var(--neutral-900);
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+}
+
+.story-link{
+    color: var(--primary-400);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    /* 文字下底線偏移 */
+    display: block;
+    /* 因為都獨立一行，所以設定區塊元素 */
+}
+
+/* 通用樣式：標籤基本樣式 */
+
+/* 通用樣式：文字 - 字體、行高、字級、字重、字距 */
+
+body{
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+    /* 觀察大部分內文行高，其他再自己 class */
+    letter-spacing: 0.05em;
+    color: var(--neutral-900);
+}
+
+h1{
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h4{
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h5{
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+h6{
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.text-sm{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.text-white{
+    color: var(--neutral-0);
+}
+
+.text-primary-400{
+    color: var(--primary-400);
+}
+
+.text-danger{
+    color: var(--danger-300);
+}
+
+.text-neutral-500{
+    color: var(--neutral-500);
+}
+
+.text-neutral-600{
+    color: var(--neutral-600);
+}
+
+.bg-primary-100{
+    background: var( --primary-100);
+}
+
+.bg-primary-200{
+    background: var( --primary-200);
+}
+
+.bg-neutral-100{
+    background: var( --neutral-100);
+}
+
+/* 通用樣式：文字 - 字體、行高、字級、字重、字距 */
+
+
+/* 通用樣式：間距 */
+
+.pb48{
+    /* 觀察內部元素到區塊距離 */
+    padding-bottom: 48px;
+}
+
+.pl8{
+    padding-left: 8px;
+}
+
+.pr8{
+    padding-right: 8px;
+}
+
+.py8{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.py8-sm{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.py12{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.py16{
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.py24{
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.py32{
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.py48{
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.py64{
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.px12{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.p12{
+    padding: 12px;
+}
+
+.p32{
+    padding: 32px;
+}
+
+.mr0-sm{
+    margin-right: 0px;
+}
+
+.mr8{
+    margin-right: 8px;
+}
+
+.mr24{
+    margin-right: 24px;
+}
+
+.mr40{
+    margin-right: 40px;
+}
+
+.mr48{
+    margin-right: 48px;
+}
+
+.mx-6{
+    margin-right: -6px;
+    margin-left: -6px;
+}
+
+.mx-12{
+    margin-right: -12px;
+    margin-left: -12px;
+}
+
+.mt32{
+    margin-top: 32px;
+}
+
+.mb4{
+    margin-bottom: 4px;
+}
+
+.mb8{
+    margin-bottom: 8px;
+}
+
+.mb12{
+    margin-bottom: 12px;
+}
+
+.mb16{
+    margin-bottom: 16px;
+}
+
+.mb24{
+    margin-bottom: 24px;
+}
+
+.mb32{
+    margin-bottom: 32px;
+}
+
+.mb40{
+    margin-bottom: 40px;
+}
+
+.mb48{
+    /* 觀察每塊群組間距 */
+    margin-bottom: 48px;
+}
+
+.gap8{
+    gap: 8px;
+}
+
+/* 通用樣式：間距 */
+
+/* 通用樣式：容器＆排列 */
+
+
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.intro{
+    max-width: 1076px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: calc(100% / 12);
+}
+
+.col-2{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: calc(100% / 12*2);
+}
+
+.col-3{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: calc(100% / 12*3);
+}
+
+.col-4{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: calc(100% / 12*4);
+}
+
+.col-5{
+    padding-left: 24px;
+    padding-right: 12px;
+    width: calc(100% / 12*5);
+}
+
+.col-6{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: calc(100% / 12*6);
+}
+
+.col-7{
+    padding-left: 4px;
+    padding-right: 4px;
+    width: calc(100% / 12*7);
+}
+
+.col-8{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: calc(100% / 12*8);
+}
+
+.col-9{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: calc(100% / 12*9);
+}
+
+.col-10{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: calc(100% / 12*10);
+}
+
+.col-11{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: calc(100% / 12*11);
+}
+
+.col-12{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: calc(100% / 12*12);
+}
+
+.d-f{
+    display: flex;
+}
+
+.d-n{
+    display: none;
+}
+
+.jcc{
+    justify-content: center;
+}
+
+.jcsb{
+    justify-content: space-between;
+}
+
+.aic{
+    align-items: center;
+}
+
+.f-w{
+    flex-wrap: wrap;
+}
+
+/* 通用樣式：容器＆排列 */
+
+/* 通用樣式：元件 */
+
+.breadcrumb-item + .breadcrumb-item::before{
+    content: '/';
+    padding: 0 12px;
+    color: var(--neutral-300);
+    font-weight: 700;
+}
+
+.breadcrumb-item{
+    display: flex;
+    font-weight: 500;
+}
+
+.breadcrumb-link{
+    color: var(--neutral-600);
+}
+
+/* 通用樣式：元件 */
+
+.btn{
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.btn-dark{
+    background-color: var(--neutral-900);
+    color: var(--neutral-0);
+}
+
+.section-line{
+    border-bottom: 1px solid var(--neutral-300);
+}
+
+
+@media(max-width: 767px){
+
+    .gap0-sm{
+        gap: 0px;
+    }
+
+    .gap16-sm{
+        gap: 16px;
+    }
+
+    .breadcrumb-item{
+        font-size: 14px;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before{
+        content: '/';
+        padding: 0 8px;
+        color: var(--neutral-300);
+        font-weight: 500;
+    }
+
+    .d-sm-n{
+    display: none;
+    }
+
+    .quote{
+        border-radius: 12px;
+        text-align: left;
+    }
+
+    .h3{
+        font-size: 28px;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+
+    .h4{
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+    
+    .h4{
+        font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    }
+
+    .h5{
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+
+    .h6{
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+
+    .col-2-pdlist-sm{
+        padding-left: 6px;
+        padding-right: 6px;
+        width: calc(100% / 4*2);
+    }
+
+    .col-4-pdlist-sm{
+        padding-left: 6px;
+        padding-right: 6px;
+        width: calc(100% / 4*4);
+    }
+
+    .col-4-sm{
+        padding-left: 12px;
+        padding-right: 12px;
+        width: calc(100% / 4*4);
+    }
+
+    .col-2-sm{
+        padding-left: 12px;
+        padding-right: 12px;
+        width: calc(100% / 4*2);
+    }
+    
+    .py0-sm{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .py12-sm{
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .py16-sm{
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .py32-sm{
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .pt32-sm{
+        padding-top: 32px;
+        padding-bottom: 0px;
+    }
+
+    .pt40-sm{
+        padding-top: 40px;
+    }
+
+    .px6-sm{
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+
+    .p24-sm{
+        padding: 24px;
+    }
+    
+    .pb32-sm{
+        padding-bottom: 32px;
+    }
+
+    .pb64-sm{
+        padding-bottom: 64px;
+    }
+
+    .mb0-sm{
+        margin-bottom: 0;
+    }
+    
+    .mb8-sm{
+        margin-bottom: 8px;
+    }
+
+    .mb24-sm{
+        margin-bottom: 24px;
+    }
+
+    .mb32-sm{
+        margin-bottom: 32px;
+    }
+
+    .mb64-sm{
+        margin-bottom: 64px;
+    }
+
+    .mx-6-sm{
+        margin-right: -6px;
+        margin-right: -6px;
+    }
+
+    .mr16-sm{
+        margin-right: 16px;
+    }
+
+    .mb12-sm{
+        margin-bottom: 12px;
+    }
+
+    .mb16-sm{
+        margin-bottom: 16px;
+    }
+
+    .mb24-sm{
+        margin-bottom: 24px;
+    }
+
+    .mb32-sm{
+        margin-bottom: 32px;
+    }
+    .d-sm-n{
+        display: none;
+    }
+   
+    .col-4-sm{
+        padding-left: 12px;
+        padding-right: 12px;
+        width: calc(100% / 4*4);
+    }
+
+    .block{
+        display: block;
+}
+
+
+@media(max-width: 576px){
+
+    .column-sm{
+        flex-direction: column;
+    }
+
+    .jcs-sm{
+        justify-content: flex-start;
+    }
+
+      .block{
+        display: block;
+    }
+}
+
+
