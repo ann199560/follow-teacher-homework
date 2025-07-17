@@ -1,0 +1,113 @@
+
+/* 產品圖片 */
+
+.pd-row{
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+.pd-col{
+    width: calc(100%/12*6);
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+/* 產品圖顏色 */
+
+.pd-color{
+    width: 64px;
+    text-align: center;
+    color: $neutral-600;
+}
+
+/* 產品尺寸按鈕 */
+
+.btn-pd-size{
+    border: 1px solid $neutral-300;
+    width: 160px;
+}
+
+.btn-pd-size.active,
+.btn-pd-size:hover{
+    border-color: $neutral-900;
+}
+
+.btn-light{
+    border: 1px solid $neutral-900;
+}
+
+.pd-action{
+    gap: 8px;
+}
+
+.pd-action .btn{
+    width: 50%;
+}
+
+.pd-info-title{
+    font-weight: 500;
+}
+
+.nav-bottom{
+    width: 100%;
+}
+
+.copyright{
+    text-align: center;
+}
+
+@media(max-width: 767px){
+
+   .d-block{
+        display: block;
+   }
+
+   .col-all-sm{
+        flex: 0 0 auto;
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+   }
+
+   .col-all-relate{
+        flex: 0 0 auto;
+        width: 80%;
+        padding-right: 0;
+        padding-left: 0;
+   }
+
+   .pd-col{
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+   }
+
+   .heart{
+        font-size: 24px;
+        padding: 0;
+   }
+
+    .d-contents-sm {
+        display: contents;
+  }
+
+    .overflow-auto-sm {
+        overflow-x: auto;
+  }
+
+    .no-wrap-sm{
+        flex-wrap: nowrap;
+    }
+
+    .pd-action .btn{
+        width: 100%;
+    }
+
+
+}
+
+@media(max-width: 576px){
+    
+  
+    
+}

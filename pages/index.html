@@ -3,26 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="style/all.css">
-    <link rel="stylesheet" href="style/story.css">
     <title>品牌故事</title>
 </head>
 <body>
-  <%- include('./layout/header'); -%>
-    <!-- 表頭選單 -->
-    <nav class="container col-sm py16 d-f aic jcsb py12-sm">
-        <ul class="d-f aic">
-            <li class="mr48"><a href="index.html">
-                <img src="img/logo.svg" alt="logo"></a>
-            </li>
-            <li ><a href="pd-list.html" class="d-sm-n py12 mr40">商品列表</a></li>
-            <li><a href="#" class="d-sm-n py12">品牌故事</a></li>
-        </ul>
-        <a href="#"><i class="bi bi-person p12"></i></a>
-    </nav>
-    <%- include('./layout/footer'); -%>
-    <!-- header -->
+     <%- include('./layout/header'); -%>
+    
+    <!-- hero header -->
     <div class="header">
         <h1 class="text-white h3 mb16 mb8-sm">品牌故事</h1>
         <h3 class="text-white h5">Brand Story</h3>
@@ -42,7 +28,7 @@
         <!-- 品牌簡介 -->
         <div class="row jcc mx-12">
         <div class="col-10 col-4-sm">
-            <img src="img/about.png" alt="about" class="mb24 mb16-sm">
+            <img src="../assets/images/about.png" alt="about" class="mb24 mb16-sm">
         </div>
         <div class="col-8 col-4-sm jcc">
         <div class="pb48 pb32-sm mb48 mb32-sm section-line">
@@ -91,31 +77,10 @@
         </div>
         </div>
     </main>
-    <!-- 加入會員 -->
-    <div class="bg-primary-200 d-f jcc aic py24">
-        <h4 class="h5 mr24 mr16-sm">加入會員取得 9 折優惠</h4>
-        <button type="button" class="btn btn-dark">馬上註冊</button>
-    </div>
-    <%- include('./layout/header'); -%>
-    <!-- 版權申明 -->
-    <footer class="py64 py32-sm">
-    <nav class="container section-line">
-        <div class="mb24 d-f aic jcsb block">
-            <a href="index.html">
-                <img src="img/logo.svg" alt="logo" class="logo">
-            </a>
-            <ul class="d-f aic block px12">
-                <li ><a href="pd-list.html" class="py12 mr40">商品列表</a></li>
-                <li><a href="index.html" class="py12">品牌故事</a></li>
-        </ul>
-        </div>
-    </nav>
-    <div class="copyright text-neutral-600 text-sm mt32">
-        <p class="mb4">Copyright ©2025 URBNSTYLE</p>
-        <p>All Rights Reserved.</p>
-    </div>
-    </footer>
+   
+    <%- include('./layout/join'); -%>
     <%- include('./layout/footer'); -%>
+    
     <script type="module" src="../main.js"></script>
 </body>
 </html>
