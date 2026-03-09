@@ -1,70 +1,90 @@
 /* 通用樣式：標籤基本樣式 */
 
-*,*::before,*::after{
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-img{
-    vertical-align: middle;
-    /* 清除圖片下方 2-3 公分的空白 */
-    max-width: 100%;
-    height: auto;
-    
+img {
+  vertical-align: middle;
+  /* 清除圖片下方 2-3 公分的空白 */
+  max-width: 100%;
+  height: auto;
 }
 
-a{
-    color:$neutral-900;
-    text-decoration: none;
-    display: block;
-    font-weight: 500;
+a {
+  color: $neutral-900;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
 }
 
 /* 通用樣式：標籤基本樣式 */
 
 /* 通用樣式：文字 - 字體、行高、字級、字重、字距 */
 
-body{
-    font-family: "Noto Sans TC", sans-serif;
-    line-height: 1.5;
-    /* 觀察大部分內文行高，其他再自己 class */
-    letter-spacing: 0.05em;
-    color: $neutral-900;
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+  /* 觀察大部分內文行高，其他再自己 class */
+  letter-spacing: 0.05em;
+  color: $neutral-900;
 }
 
-h1{
-    font-size: 40px;
-    line-height: 1.2;
-    font-weight: 700;
+.display1 {
+  font-size: 64px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 5%;
 }
 
-h2{
-    font-size: 32px;
-    line-height: 1.2;
-    font-weight: 700;
+.display2 {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 5%;
 }
 
-h3{
-    font-size: 28px;
-    line-height: 1.2;
-    font-weight: 700;
+h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 5%;
 }
 
-h4{
-    font-size: 24px;
-    line-height: 1.2;
-    font-weight: 700;
+h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 5%;
 }
 
-h5{
-    font-size: 20px;
-    line-height: 1.2;
-    font-weight: 700;
-}
-h6{
-    font-size: 16px;
-    line-height: 1.2;
-    font-weight: 700;
+h3 {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 5%;
 }
 
+h4 {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 5%;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 5%;
+}
+h6 {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 5%;
+}
 
 /* 通用樣式：文字 - 字體、行高、字級、字重、字距 */
