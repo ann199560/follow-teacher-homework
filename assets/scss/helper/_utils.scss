@@ -183,8 +183,12 @@
   margin-bottom: 48px;
 }
 
-.gap8 {
-  gap: 8px;
+.row-gap8 {
+  row-gap: 8px;
+}
+
+.column-gap8 {
+  column-gap: 8px;
 }
 
 /* 通用樣式：間距 */
@@ -196,27 +200,6 @@
   margin: 0 auto;
   padding-left: 12px;
   padding-right: 12px;
-}
-
-.section {
-  max-width: 1296px;
-  padding-left: 12px;
-  padding-right: 12px;
-}
-
-.No1-tag {
-  background-color: $primary-100;
-  color: $primary-400;
-  font-size: 14px;
-  line-height: 1.5;
-  letter-spacing: 5%;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  position: absolute;
-  top: 0px;
-  left: 12px;
 }
 
 .position-relative {
@@ -306,6 +289,18 @@
   width: calc(100% / 12 * 12);
 }
 
+.w-33 {
+  width: 33%;
+}
+
+.w-66 {
+  width: 66%;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
 .d-f {
   display: flex;
 }
@@ -380,6 +375,21 @@
   border-bottom: 1px solid $neutral-300;
 }
 
+.No1-tag {
+  background-color: $primary-100;
+  color: $primary-400;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 5%;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: absolute;
+  top: 0px;
+  left: 12px;
+}
+
 .slideDot {
   width: 24px;
   height: 8px;
@@ -394,11 +404,46 @@
   border-radius: 50%;
 }
 
+.dots {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -200%);
+}
+
 .text-center {
   text-align: center;
 }
 
+.img-mask-opacity70:hover img {
+  opacity: 0.7;
+}
+
+.img-mask-black40 {
+  &::before {
+    // ::before 用於 裝飾背景、遮罩、底層效果，::after 用於 icon、標籤、裝飾元素
+    content: ""; // 偽元素必須要有 content 才會被渲染
+    position: absolute; // 絕對定位，讓遮罩可以覆蓋整個容器
+    inset: 0; // 讓遮罩填滿整個區塊（等同於 top:0; right:0; bottom:0; left:0; ）
+    background: rgba($color: #000000, $alpha: 0.4);
+  }
+}
+
+.series-text {
+  position: absolute;
+  inset: 0;
+  &:hover h3 {
+    color: $primary-300;
+  }
+}
+
 @media (max-width: 767px) {
+  img {
+    width: 300px;
+    height: 300px;
+    min-width: auto;
+    flex-shrink: 0;
+  }
+
   .gap0-sm {
     gap: 0px;
   }
@@ -583,6 +628,14 @@
 
   .block {
     display: block;
+  }
+
+  .d-md-contents {
+    display: contents;
+  }
+
+  .overflow-md-x {
+    overflow-x: auto;
   }
 }
 

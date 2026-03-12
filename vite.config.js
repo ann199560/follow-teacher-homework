@@ -33,7 +33,7 @@ export default defineConfig({
   ],
   server: {
     // 啟動 server 時預設開啟的頁面
-    open: "pages/story.html",
+    open: "pages/index",
   },
   build: {
     rollupOptions: {

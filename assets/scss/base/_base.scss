@@ -7,10 +7,10 @@
 }
 
 img {
-  vertical-align: middle;
-  /* 清除圖片下方 2-3 公分的空白 */
+  display: block;
   max-width: 100%;
-  height: auto;
+  min-width: 0; // 設定元素「最小不能小於的寬度」
+  object-fit: cover;
 }
 
 a {
